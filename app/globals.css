@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ── Brand color tokens ─────────────────────────────── */
+  --midnight: #161826; /* Midnight Indigo */
+  --midnight-800: #1e2133;
+  --midnight-700: #262a40;
+  --signal: #2e6bff; /* Signal Blue */
+  --gold: #e3b04b; /* Desert Gold */
+  --bone: #f4f2ed; /* Bone White */
+  --slate: #6b7186; /* Slate Grey */
+
+  --bg: var(--midnight);
+  --fg: var(--bone);
+
+  color-scheme: dark;
+}
+
+* {
+  border-color: rgba(107, 113, 134, 0.16);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--midnight);
+  color: var(--bone);
+  font-feature-settings: "ss01", "cv01";
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(46, 107, 255, 0.35);
+  color: var(--bone);
+}
+
+/* Focus states — accessible, brand-tinted */
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar (desktop) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--midnight);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--midnight-700);
+    border-radius: 999px;
+    border: 2px solid var(--midnight);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--slate);
+  }
+}
+
+/* Lenis smooth-scroll requirements */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Section eyebrow label with the gold signal dot */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-slate;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-1.5 w-1.5 rounded-full bg-gold;
+    box-shadow: 0 0 12px 1px rgba(227, 176, 75, 0.7);
+  }
+
+  /* Gold signal dot micro-motif for bullets */
+  .signal-dot {
+    @apply inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold;
+    box-shadow: 0 0 10px 1px rgba(227, 176, 75, 0.6);
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Radial glow used behind hero + section highlights */
+  .glow-signal {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(46, 107, 255, 0.32) 0%,
+      rgba(46, 107, 255, 0) 100%
+    );
+  }
+  .glow-gold {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(227, 176, 75, 0.18) 0%,
+      rgba(227, 176, 75, 0) 100%
+    );
+  }
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  }
+}
+
+/* Respect reduced motion — disable heavy motion and marquees */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none !important;
+  }
+}
