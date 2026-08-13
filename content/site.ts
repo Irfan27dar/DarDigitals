@@ -4,7 +4,7 @@ export const site = {
   tagline: "Video · Design · AI",
   description:
     "DarDigitals is a Dubai creative studio building brands, websites, content and campaigns that make good businesses easier to trust.",
-  url: "https://dardigitals.com",
+  url: "https://www.dardigitals.com",
   location: "Dubai, UAE",
   email: "hello@dardigitals.com",
   whatsapp: "+971 50 000 0000",
