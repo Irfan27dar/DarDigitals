@@ -12,7 +12,7 @@ const line2 = ["BETTER", "DIGITAL."];
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-28">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28">
       {/* Background: grid + glows */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-grid-fade bg-[size:64px_64px] opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]" />
@@ -125,24 +125,6 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll hint */}
-      <motion.div
-        aria-hidden
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-slate lg:flex"
-      >
-        <span className="text-[11px] uppercase tracking-[0.25em]">Scroll</span>
-        <span className="relative flex h-9 w-5 justify-center rounded-full border border-white/20">
-          <motion.span
-            animate={{ y: [3, 14, 3] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="mt-1.5 h-1.5 w-1 rounded-full bg-gold"
-          />
-        </span>
-      </motion.div>
     </section>
   );
 }
