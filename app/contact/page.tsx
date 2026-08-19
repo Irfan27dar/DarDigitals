@@ -40,7 +40,7 @@ export default function ContactPage() {
             <Reveal delay={0.05}>
               <h1 className="mt-6 font-display text-display-sm font-bold text-balance text-bone">
                 Let&apos;s build something worth{" "}
-                <span className="bg-gradient-to-r from-signal to-[#7aa2ff] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-signal via-iris to-aqua bg-clip-text text-transparent">
                   showing
                 </span>
                 <span className="text-gold">.</span>

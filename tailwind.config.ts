@@ -10,14 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         // Brand tokens — mirror the CSS variables in globals.css
-        midnight: "#161826", // Midnight Indigo — base / ink / dark sections
-        signal: "#2E6BFF", // Signal Blue — primary accent
-        gold: "#E3B04B", // Desert Gold — luxury accent / signal dot
+        midnight: "#0F1024", // Deep Indigo — base / ink / dark sections
+        signal: "#3B6EFF", // Electric Blue — primary accent
+        "signal-600": "#2C55E6", // deeper electric blue — hover/active
+        iris: "#7C5CFF", // Iris Violet — vibrant secondary accent
+        aqua: "#22D3EE", // Cyan — vibrant highlight
+        magenta: "#FF4D9D", // Hot Pink — sparing hot accent
+        gold: "#FBBF3C", // Signal Gold — the signal-dot / warm detail
         bone: "#F4F2ED", // Bone White — light canvas
-        slate: "#6B7186", // Slate Grey — neutral / muted text
+        slate: "#6B7186", // Slate — neutral / muted text (readable on bone + indigo)
         // Supporting shades derived from the base indigo
-        "midnight-800": "#1E2133",
-        "midnight-700": "#262A40",
+        "midnight-800": "#191A38",
+        "midnight-700": "#23244A",
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
@@ -33,9 +37,10 @@ const config: Config = {
         container: "80rem",
       },
       boxShadow: {
-        glow: "0 0 80px -10px rgba(46, 107, 255, 0.55)",
-        "glow-sm": "0 0 40px -8px rgba(46, 107, 255, 0.45)",
-        card: "0 20px 50px -20px rgba(0, 0, 0, 0.5)",
+        glow: "0 0 90px -10px rgba(59, 110, 255, 0.6)",
+        "glow-sm": "0 0 44px -8px rgba(59, 110, 255, 0.5)",
+        "glow-iris": "0 0 70px -10px rgba(124, 92, 255, 0.55)",
+        card: "0 22px 55px -22px rgba(0, 0, 0, 0.6)",
       },
       backgroundImage: {
         "grid-fade":

@@ -17,7 +17,9 @@ export default function Hero() {
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-grid-fade bg-[size:64px_64px] opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]" />
         <div className="glow-signal absolute left-1/2 top-1/2 h-[70vh] w-[70vh] -translate-x-1/2 -translate-y-1/2 animate-pulse-glow" />
-        <div className="glow-gold absolute right-[8%] top-[22%] h-64 w-64" />
+        <div className="glow-iris absolute -left-[8%] top-[6%] h-[55vh] w-[55vh]" />
+        <div className="glow-aqua absolute -right-[6%] bottom-[2%] h-[46vh] w-[46vh]" />
+        <div className="glow-gold absolute right-[12%] top-[20%] h-56 w-56" />
         <div className="grain absolute inset-0 opacity-[0.04] mix-blend-overlay" />
       </div>
 
@@ -64,7 +66,7 @@ export default function Hero() {
                 className="mr-[0.28em] inline-block"
               >
                 {i === line2.length - 1 ? (
-                  <span className="relative bg-gradient-to-r from-signal to-[#7aa2ff] bg-clip-text text-transparent">
+                  <span className="relative bg-gradient-to-r from-signal via-iris to-aqua bg-clip-text text-transparent">
                     {w.replace(".", "")}
                     <span className="text-gold">.</span>
                   </span>

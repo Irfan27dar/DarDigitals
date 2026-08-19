@@ -24,9 +24,9 @@ export function generateMetadata({
 }
 
 const covers: Record<string, string> = {
-  indigo: "bg-[radial-gradient(120%_120%_at_20%_10%,#2a2f4d_0%,#161826_60%)]",
-  blue: "bg-[radial-gradient(120%_120%_at_80%_0%,#1f3a7a_0%,#161826_62%)]",
-  gold: "bg-[radial-gradient(120%_120%_at_15%_15%,#3a3320_0%,#161826_60%)]",
+  indigo: "bg-[radial-gradient(120%_120%_at_20%_10%,#2b2358_0%,#0f1024_60%)]",
+  blue: "bg-[radial-gradient(120%_120%_at_80%_0%,#1c3a86_0%,#0f1024_62%)]",
+  gold: "bg-[radial-gradient(120%_120%_at_15%_15%,#3a3320_0%,#0f1024_60%)]",
 };
 
 const sections = [

@@ -54,11 +54,17 @@ All copy and data are typed files in [`/content`](content) — no code changes n
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Midnight Indigo | `#161826` | Base / dark sections |
-| Signal Blue | `#2E6BFF` | Primary accent, CTAs, glows |
-| Desert Gold | `#E3B04B` | Luxury accent, the "signal dot" |
+| Deep Indigo | `#0F1024` | Base / dark sections |
+| Electric Blue | `#3B6EFF` | Primary accent, CTAs, glows |
+| Iris Violet | `#7C5CFF` | Vibrant secondary accent, gradients, glows |
+| Cyan | `#22D3EE` | Vibrant highlight, gradient tail |
+| Signal Gold | `#FBBF3C` | Warm accent, the "signal dot" |
+| Hot Pink | `#FF4D9D` | Sparing hot accent |
 | Bone White | `#F4F2ED` | Light sections |
-| Slate Grey | `#6B7186` | Muted text |
+| Slate Grey | `#6B7186` | Muted text (readable on bone + indigo) |
+
+The signature moment is the electric **blue → iris → cyan** gradient sweep used on
+key headline words, backed by layered blue/violet/cyan radial glows.
 
 ## Contact form
 

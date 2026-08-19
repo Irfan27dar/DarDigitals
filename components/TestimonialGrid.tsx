@@ -26,7 +26,7 @@ export default function TestimonialGrid() {
           className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-midnight-800 outline-none"
         >
           {/* Portrait placeholder — monogram initials on a graded field */}
-          <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_30%_20%,#262a40_0%,#161826_65%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_30%_20%,#241f48_0%,#0f1024_65%)]" />
           <div className="grain absolute inset-0 opacity-[0.05] mix-blend-overlay" />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 group-hover:opacity-0 group-focus:opacity-0">

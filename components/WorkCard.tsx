@@ -9,9 +9,9 @@ import { staggerItem } from "@/lib/motion";
 // Gradient "film still" placeholders keyed off case.cover.
 const covers: Record<string, string> = {
   indigo:
-    "bg-[radial-gradient(120%_120%_at_20%_10%,#2a2f4d_0%,#161826_55%)] before:bg-[conic-gradient(from_180deg_at_60%_40%,rgba(46,107,255,0.35),transparent_45%)]",
-  blue: "bg-[radial-gradient(120%_120%_at_80%_0%,#1f3a7a_0%,#161826_60%)] before:bg-[radial-gradient(60%_60%_at_30%_80%,rgba(46,107,255,0.45),transparent_70%)]",
-  gold: "bg-[radial-gradient(120%_120%_at_15%_15%,#3a3320_0%,#161826_58%)] before:bg-[radial-gradient(55%_55%_at_75%_25%,rgba(227,176,75,0.32),transparent_70%)]",
+    "bg-[radial-gradient(120%_120%_at_20%_10%,#2b2358_0%,#0f1024_55%)] before:bg-[conic-gradient(from_180deg_at_60%_40%,rgba(124,92,255,0.45),rgba(34,211,238,0.12),transparent_50%)]",
+  blue: "bg-[radial-gradient(120%_120%_at_80%_0%,#1c3a86_0%,#0f1024_60%)] before:bg-[radial-gradient(60%_60%_at_30%_80%,rgba(59,110,255,0.55),transparent_70%)]",
+  gold: "bg-[radial-gradient(120%_120%_at_15%_15%,#3a3320_0%,#0f1024_58%)] before:bg-[radial-gradient(55%_55%_at_75%_25%,rgba(251,191,60,0.38),transparent_70%)]",
 };
 
 export default function WorkCard({

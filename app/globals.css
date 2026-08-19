@@ -4,13 +4,17 @@
 
 :root {
   /* ── Brand color tokens ─────────────────────────────── */
-  --midnight: #161826; /* Midnight Indigo */
-  --midnight-800: #1e2133;
-  --midnight-700: #262a40;
-  --signal: #2e6bff; /* Signal Blue */
-  --gold: #e3b04b; /* Desert Gold */
+  --midnight: #0f1024; /* Deep Indigo */
+  --midnight-800: #191a38;
+  --midnight-700: #23244a;
+  --signal: #3b6eff; /* Electric Blue */
+  --signal-600: #2c55e6;
+  --iris: #7c5cff; /* Iris Violet */
+  --aqua: #22d3ee; /* Cyan */
+  --magenta: #ff4d9d; /* Hot Pink */
+  --gold: #fbbf3c; /* Signal Gold */
   --bone: #f4f2ed; /* Bone White */
-  --slate: #6b7186; /* Slate Grey */
+  --slate: #6b7186; /* Slate */
 
   --bg: var(--midnight);
   --fg: var(--bone);
@@ -36,7 +40,7 @@ body {
 
 /* Selection */
 ::selection {
-  background-color: rgba(46, 107, 255, 0.35);
+  background-color: rgba(59, 110, 255, 0.38);
   color: var(--bone);
 }
 
@@ -92,13 +96,13 @@ html.lenis body {
   .eyebrow::before {
     content: "";
     @apply h-1.5 w-1.5 rounded-full bg-gold;
-    box-shadow: 0 0 12px 1px rgba(227, 176, 75, 0.7);
+    box-shadow: 0 0 12px 1px rgba(251, 191, 60, 0.75);
   }
 
   /* Gold signal dot micro-motif for bullets */
   .signal-dot {
     @apply inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold;
-    box-shadow: 0 0 10px 1px rgba(227, 176, 75, 0.6);
+    box-shadow: 0 0 10px 1px rgba(251, 191, 60, 0.65);
   }
 
   .link-underline {
@@ -117,19 +121,33 @@ html.lenis body {
   .text-balance {
     text-wrap: balance;
   }
-  /* Radial glow used behind hero + section highlights */
+  /* Radial glows used behind hero + section highlights */
   .glow-signal {
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(46, 107, 255, 0.32) 0%,
-      rgba(46, 107, 255, 0) 100%
+      rgba(59, 110, 255, 0.4) 0%,
+      rgba(59, 110, 255, 0) 100%
+    );
+  }
+  .glow-iris {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(124, 92, 255, 0.36) 0%,
+      rgba(124, 92, 255, 0) 100%
+    );
+  }
+  .glow-aqua {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(34, 211, 238, 0.26) 0%,
+      rgba(34, 211, 238, 0) 100%
     );
   }
   .glow-gold {
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(227, 176, 75, 0.18) 0%,
-      rgba(227, 176, 75, 0) 100%
+      rgba(251, 191, 60, 0.2) 0%,
+      rgba(251, 191, 60, 0) 100%
     );
   }
   .grain {

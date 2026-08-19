@@ -37,7 +37,7 @@ export default function AboutPage() {
           <Reveal delay={0.05}>
             <h1 className="mt-6 max-w-[18ch] font-display text-display-md font-bold text-balance text-bone">
               We make good businesses{" "}
-              <span className="bg-gradient-to-r from-signal to-[#7aa2ff] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-signal via-iris to-aqua bg-clip-text text-transparent">
                 impossible to overlook
               </span>
               <span className="text-gold">.</span>
