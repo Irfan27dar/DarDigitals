@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { work, getCaseStudy } from "@/content/work";
 import Reveal from "@/components/Reveal";
 import CTABand from "@/components/CTABand";
@@ -27,6 +27,7 @@ const covers: Record<string, string> = {
   indigo: "bg-[radial-gradient(120%_120%_at_20%_10%,#2b2358_0%,#0f1024_60%)]",
   blue: "bg-[radial-gradient(120%_120%_at_80%_0%,#1c3a86_0%,#0f1024_62%)]",
   gold: "bg-[radial-gradient(120%_120%_at_15%_15%,#3a3320_0%,#0f1024_60%)]",
+  iris: "bg-[radial-gradient(120%_120%_at_80%_10%,#2a2066_0%,#0f1024_60%)]",
 };
 
 const sections = [
@@ -85,6 +86,22 @@ export default function CaseStudyPage({
               {study.summary}
             </p>
           </Reveal>
+          {study.url && (
+            <Reveal delay={0.2}>
+              <a
+                href={study.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-semibold text-white shadow-glow-sm transition-colors hover:bg-signal-600"
+              >
+                Visit live site
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </a>
+            </Reveal>
+          )}
         </div>
       </section>
 

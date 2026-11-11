@@ -6,6 +6,7 @@ export type CaseStudy = {
   year: string;
   tags: string[];
   cover: string; // gradient token key used for the placeholder visual
+  url: string; // live site
   summary: string;
   context: string;
   challenge: string;
@@ -17,176 +18,124 @@ export type CaseStudy = {
 };
 
 /**
- * Tasteful placeholder projects. Replace copy + imagery with real
- * case studies as they go live. `cover` maps to a gradient in WorkCard.
+ * Real, live projects built by the studio. Each `url` is the deployed site.
+ * Metrics are factual scope/stack notes, not performance claims.
  */
 export const work: CaseStudy[] = [
   {
-    slug: "lumen-hospitality",
-    title: "A hospitality brand, re-graded",
-    client: "Lumen Hospitality",
-    category: "Brand Identity",
-    year: "2025",
-    tags: ["Brand", "Art Direction", "Content"],
-    cover: "indigo",
-    summary:
-      "Repositioned a growing Dubai restaurant group with a confident identity and a content system that finally matched the food.",
-    context:
-      "Lumen had three venues and a fourth on the way, but the brand looked like three different companies. The quality on the plate was never visible online.",
-    challenge:
-      "Unify the group under one identity without flattening what made each venue distinct — and do it fast enough to launch the new location on time.",
-    direction:
-      "A warm, cinematic system: deep tones, gold detailing and photography treated like film stills. A flexible logo suite let each venue keep its own accent.",
-    execution:
-      "We delivered the master brand, per-venue lockups, menu and signage design, plus a two-day content shoot that stocked six weeks of social.",
-    result:
-      "The new venue opened fully-booked for its first fortnight, and group-wide social engagement more than doubled within the quarter.",
-    reflection:
-      "Consistency didn't cost personality. Giving each venue a controlled accent made the group feel bigger and more premium at once.",
-    metrics: [
-      { label: "Social engagement", value: "+124%" },
-      { label: "Opening occupancy", value: "100%" },
-      { label: "Venues unified", value: "4" },
-    ],
-  },
-  {
-    slug: "meridian-proptech",
-    title: "Making proptech feel human",
-    client: "Meridian",
+    slug: "gaash-tour-and-travels",
+    title: "Kashmir, shot like a film",
+    client: "Gaash Tour & Travels",
     category: "Web & Digital",
-    year: "2025",
-    tags: ["Web", "UX / UI", "Motion"],
-    cover: "blue",
-    summary:
-      "A new marketing site that turned a complex property platform into a clear, credible first impression.",
-    context:
-      "Meridian had strong technology and a website that undersold it. Prospects left confused about what the product actually did.",
-    challenge:
-      "Explain a multi-sided platform in one scroll — for investors, agents and buyers — without drowning anyone in jargon.",
-    direction:
-      "A calm, structured layout with motion used only to guide attention. One clear promise up top, proof underneath, a single obvious next step.",
-    execution:
-      "We designed and built a responsive Next.js site with animated product walk-throughs and a modular system their team can extend.",
-    result:
-      "Demo requests rose sharply after launch and average time-on-page climbed as visitors actually read the story.",
-    reflection:
-      "Restraint was the feature. Cutting the site in half made the technology look more capable, not less.",
-    metrics: [
-      { label: "Demo requests", value: "+61%" },
-      { label: "Time on page", value: "+38%" },
-      { label: "Bounce rate", value: "-22%" },
-    ],
-  },
-  {
-    slug: "attar-fragrance",
-    title: "A fragrance line, shot like cinema",
-    client: "Attar & Co.",
-    category: "Content Studio",
-    year: "2024",
-    tags: ["Photography", "Video", "Social"],
+    year: "2026",
+    tags: ["Web & Digital", "Brand", "Content"],
     cover: "gold",
+    url: "https://gaash-tour-and-travel.vercel.app",
     summary:
-      "A launch content package that made a boutique fragrance house feel like a global brand.",
+      "A cinematic marketing site for a Kashmir & Ladakh tour operator — itineraries, houseboats and mountain expeditions, built to turn browsers into enquiries.",
     context:
-      "A new luxury fragrance line was ready to launch with no visual language and a tight window before the retail push.",
+      "Gaash runs tailor-made journeys through Kashmir, Ladakh and the pilgrimage routes — Dal Lake houseboats, Gulmarg's meadows, Ladakh's high passes — but had no digital home that did the landscape justice.",
     challenge:
-      "Create a premium, ownable look across stills and video that would hold up next to established houses on the same shelf.",
+      "Make a tour operator feel premium and trustworthy, present flexible itineraries clearly, and give travellers an obvious, low-friction way to enquire.",
     direction:
-      "Macro texture, warm gold light and slow, deliberate motion — every frame graded to feel expensive and calm.",
+      "A warm, editorial system built around full-bleed photography of the valley, with a yellow-and-ink brand palette and calm, confident motion that lets the scenery lead.",
     execution:
-      "A single studio day produced a hero film, cut-downs for reels, and a full library of stills for e-commerce and print.",
+      "Designed and built in Next.js 14 with Tailwind and Framer Motion — tour and itinerary sections, a photo-led hero, the real Gaash logo, and an enquiry flow, fully responsive and deployed on Vercel.",
     result:
-      "The launch sold through its first production run early and the film became the brand's most-shared asset.",
+      "A live, mobile-first site that presents Gaash as a serious, modern operator and gives every page a clear path to get in touch.",
     reflection:
-      "One strong shoot, well-directed, outperformed months of ad-hoc content. Direction is the multiplier.",
+      "When the product is a place this beautiful, restraint wins — the design's job was to get out of the way of the photography.",
     metrics: [
-      { label: "First run", value: "Sold out" },
-      { label: "Assets delivered", value: "40+" },
-      { label: "Shoot days", value: "1" },
+      { label: "Built with", value: "Next.js 14" },
+      { label: "Responsive", value: "100%" },
+      { label: "On Vercel", value: "Live" },
     ],
   },
   {
-    slug: "northline-logistics",
-    title: "One idea, every channel",
-    client: "Northline Logistics",
-    category: "Campaign Studio",
-    year: "2024",
-    tags: ["Campaign", "Concept", "Rollout"],
+    slug: "al-hamad-group",
+    title: "Scale, made visible",
+    client: "Al Hamad Group",
+    category: "Web & Digital",
+    year: "2026",
+    tags: ["Web & Digital", "Corporate", "Motion"],
     cover: "indigo",
+    url: "https://al-hamad-group.vercel.app",
     summary:
-      "A single creative platform that carried a B2B logistics brand across out-of-home, digital and sales.",
+      "A corporate site for a diversified contractor spanning construction, industry, real estate, renewable energy and trading — animated to signal scale.",
     context:
-      "Northline was invisible in a commoditised market where everyone claimed the same thing: reliability.",
+      "Al Hamad Group is a diversified multinational contractor active across construction, industry, real estate, renewable energy and trading — a lot of substance that its old presence didn't convey.",
     challenge:
-      "Find a distinctive idea that could stretch from a billboard to a sales deck without losing its edge.",
+      "Communicate the breadth of a multi-sector group without it reading as scattered, and make an established contractor feel as modern as it is capable.",
     direction:
-      "We built the campaign around a simple promise about time, expressed with bold type and a restrained, confident palette.",
+      "A structured, animated landing experience with a confident dark palette — scroll-driven reveals that reveal each division in turn and signal reach and reliability.",
     execution:
-      "One concept, adapted into OOH, paid social, a landing page and a refreshed pitch deck — all shipped in six weeks.",
+      "Built in Next.js 14 with Tailwind and Framer Motion: a sectioned overview of the group's divisions, smooth scroll animation and a responsive layout, deployed on Vercel.",
     result:
-      "Inbound leads climbed and the sales team finally had a story that prospects remembered in the room.",
+      "A credible, contemporary corporate site that presents the group as one coherent, capable organisation across all five sectors.",
     reflection:
-      "A campaign is only as strong as the idea underneath it. We spent our time there, and everything else got easier.",
+      "For a group this broad, the design challenge is editing — giving each division room while keeping one clear story.",
     metrics: [
-      { label: "Inbound leads", value: "+47%" },
-      { label: "Channels", value: "5" },
-      { label: "Delivery", value: "6 wks" },
+      { label: "Sectors", value: "5" },
+      { label: "Animation", value: "Framer" },
+      { label: "Deployed", value: "Live" },
     ],
   },
   {
-    slug: "vela-wellness",
-    title: "A wellness brand with room to grow",
-    client: "Vela",
-    category: "Creative Retainer",
-    year: "Ongoing",
-    tags: ["Retainer", "Design", "Content"],
+    slug: "gearup-me",
+    title: "Genuine hardware, fast",
+    client: "GearUp.Me",
+    category: "Web & Digital",
+    year: "2026",
+    tags: ["Web & Digital", "E-commerce", "UX / UI"],
     cover: "blue",
+    url: "https://gear-up-me.vercel.app",
     summary:
-      "An ongoing partnership keeping a fast-moving wellness brand consistent as it scales.",
+      "An e-commerce storefront for genuine PC hardware in the UAE — fast, filterable and built around warranty and same-day delivery.",
     context:
-      "Vela was launching new products faster than any single freelancer could keep up with, and the brand was starting to drift.",
+      "GearUp.Me sells genuine computer hardware in the UAE with warranty coverage and same-day delivery, and needed a storefront that felt as trustworthy as the promise.",
     challenge:
-      "Hold a coherent look and a steady content cadence across launches, campaigns and everyday social — every month.",
+      "Build a clean, fast shopping experience that makes genuine product and same-day delivery the headline, and holds up across a full catalogue of components.",
     direction:
-      "We built a living system and act as the embedded creative team, so quality stays high without slowing the pace.",
+      "A crisp, product-first store with a confident green/teal/orange system — clear hierarchy, quick browsing and trust signals (genuine, warranty, same-day) kept front and centre.",
     execution:
-      "Each month: a content batch, campaign creative for the next launch, and design support across the funnel — on a predictable rhythm.",
+      "Built in Next.js 14 with a Supabase backend: catalogue and store routes, product and category pages, AED pricing and a responsive, conversion-minded storefront.",
     result:
-      "The brand ships more, looks more consistent, and the founders stopped worrying about creative as a bottleneck.",
+      "A live storefront that presents GearUp.Me as a credible UAE hardware retailer and makes finding and buying the right component straightforward.",
     reflection:
-      "The value of a retainer is momentum. Being close to the business means the work keeps getting sharper.",
+      "In commerce, trust is the feature. The design spends its energy making 'genuine' and 'same-day' impossible to miss.",
     metrics: [
-      { label: "Monthly assets", value: "30+" },
-      { label: "Partnership", value: "18 mo" },
-      { label: "Launches", value: "9" },
+      { label: "Market", value: "UAE" },
+      { label: "Delivery", value: "Same-day" },
+      { label: "Storefront", value: "Live" },
     ],
   },
   {
-    slug: "atlas-fintech",
-    title: "Trust, designed in",
-    client: "Atlas",
-    category: "Brand Identity",
-    year: "2024",
-    tags: ["Brand", "Web", "Motion"],
-    cover: "gold",
+    slug: "silver-star-electromechanical",
+    title: "Engineering, presented with precision",
+    client: "Silver Star Electromechanical",
+    category: "Web & Digital",
+    year: "2026",
+    tags: ["Web & Digital", "Corporate", "MEP"],
+    cover: "iris",
+    url: "https://silver-star-electromechanical.vercel.app",
     summary:
-      "A ground-up identity and site for a fintech that needed to feel established on day one.",
+      "A marketing site for a Dubai MEP contractor — HVAC, electrical, plumbing and fit-out — built to make engineering rigour feel credible at a glance.",
     context:
-      "Atlas was pre-launch and needed to earn trust from regulators, partners and users before it had a track record.",
+      "Silver Star Electromechanical (SSEM) delivers MEP contracting across Dubai — HVAC, plumbing, electrical, fire-fighting and fit-out for hotels, hospitals, malls and residential and commercial projects — but needed a presence that matched its track record.",
     challenge:
-      "Look credible and human at once — serious enough for finance, warm enough that people wanted to sign up.",
+      "Present a broad MEP service range clearly and make a technical contractor feel precise, established and easy to trust.",
     direction:
-      "A precise, structured identity softened with warm accents and confident motion. Clarity as a signal of competence.",
+      "A clean, structured corporate system — confident typography, organised service sections and restrained motion that signals engineering discipline.",
     execution:
-      "Full brand system, product-marketing site, pitch materials and a motion toolkit for launch content.",
+      "Built in Next.js with Tailwind: a services overview across HVAC, electrical, plumbing, fire-fighting and maintenance, sector and project context, and a responsive, professional layout deployed on Vercel.",
     result:
-      "Atlas closed its next round and launched with a brand that punched well above its stage.",
+      "A credible, modern marketing site that presents SSEM as a capable, detail-driven MEP partner in the Dubai market.",
     reflection:
-      "For a young company, design is evidence. A considered brand told the market Atlas was here to stay.",
+      "For a technical contractor, clarity is the brand — the site's job is to make precision legible.",
     metrics: [
-      { label: "Round", value: "Closed" },
-      { label: "Touchpoints", value: "12" },
-      { label: "To launch", value: "8 wks" },
+      { label: "Discipline", value: "MEP" },
+      { label: "Based in", value: "Dubai" },
+      { label: "Deployed", value: "Live" },
     ],
   },
 ];

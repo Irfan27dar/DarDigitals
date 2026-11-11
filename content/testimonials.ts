@@ -5,47 +5,41 @@ export type Testimonial = {
   initials: string;
 };
 
+// Real client testimonials (from irfandar.com).
 export const testimonials: Testimonial[] = [
   {
-    name: "Layla Haddad",
-    role: "Founder, Lumen Hospitality",
-    initials: "LH",
+    name: "Indrajith K",
+    role: "Interifix Technical Services · Branding",
+    initials: "IK",
     quote:
-      "They made our group look like one confident brand overnight. The new venue opened fully booked and the content finally matches the food.",
+      "Irfan is an exceptionally talented creative professional who consistently delivers top-tier work. His branding gave us a clear, confident identity.",
   },
   {
-    name: "Omar Farouk",
-    role: "CEO, Meridian",
-    initials: "OF",
+    name: "Ali",
+    role: "Olat Properties · Social Media",
+    initials: "AL",
     quote:
-      "Our old site buried the product. DarDigitals cut it in half and demo requests jumped. Rare to find design and engineering this joined-up.",
+      "Irfan did an excellent job managing our social media — professional, creative and consistent, and he genuinely understood our real estate business.",
   },
   {
-    name: "Sara Nasser",
-    role: "Brand Lead, Attar & Co.",
-    initials: "SN",
-    quote:
-      "One studio day gave us a launch that looked like a global house. The film is still our most-shared asset a year later.",
-  },
-  {
-    name: "Daniel Okafor",
-    role: "Marketing Director, Northline",
-    initials: "DO",
-    quote:
-      "They found the one idea we could build everything on. For the first time, prospects remember us in the room.",
-  },
-  {
-    name: "Mariam Al Suwaidi",
-    role: "Co-founder, Vela",
+    name: "Mohammad Asim",
+    role: "Video Production",
     initials: "MA",
     quote:
-      "Having them on retainer means we ship faster and never worry about consistency. It feels like an in-house team without the overhead.",
+      "The edit came back cleaner and sharper than I'd hoped, and he kept me in the loop the whole way. On a tight deadline, he's now my first call.",
   },
   {
-    name: "Yusuf Rahman",
-    role: "COO, Atlas",
-    initials: "YR",
+    name: "Ovais",
+    role: "Pashmeen · Logo Design",
+    initials: "OV",
     quote:
-      "Pre-launch, our brand had to earn trust with nothing to point to. The identity they built made us look established from day one.",
+      "Amazing skills. It was my first project with Irfan and he delivered well before time — genuinely excellent work from start to finish.",
+  },
+  {
+    name: "Private Client",
+    role: "Graphic Design",
+    initials: "PC",
+    quote:
+      "Irfan Dar is an exceptionally talented graphic designer with a great eye for detail and creativity — modern work, and reliable every time.",
   },
 ];

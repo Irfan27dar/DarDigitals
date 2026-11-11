@@ -12,14 +12,14 @@ export const keywords: string[] = [
   "Creative Retainer",
 ];
 
-// Placeholder client / partner wordmarks for the logo strip.
+// Real brands the studio has produced work for — used in the logo strip.
 export const clientLogos: string[] = [
-  "Lumen",
-  "Meridian",
-  "Attar & Co.",
-  "Northline",
-  "Vela",
-  "Atlas",
-  "Oryx",
-  "Marsa",
+  "Gaash Tour & Travels",
+  "Al Hamad Group",
+  "GearUp.Me",
+  "Uplux",
+  "Interifix",
+  "Enema Smart Living",
+  "Wealth Pathways",
+  "Pashmeen",
 ];
