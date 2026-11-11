@@ -5,7 +5,8 @@ export type CaseStudy = {
   category: string;
   year: string;
   tags: string[];
-  cover: string; // gradient token key used for the placeholder visual
+  cover: string; // gradient token key used as a fallback tint behind the image
+  image: string; // above-the-fold screenshot of the live site
   url: string; // live site
   summary: string;
   context: string;
@@ -30,6 +31,7 @@ export const work: CaseStudy[] = [
     year: "2026",
     tags: ["Web & Digital", "Brand", "Content"],
     cover: "gold",
+    image: "/work/gaash.jpg",
     url: "https://gaash-tour-and-travel.vercel.app",
     summary:
       "A cinematic marketing site for a Kashmir & Ladakh tour operator — itineraries, houseboats and mountain expeditions, built to turn browsers into enquiries.",
@@ -59,6 +61,7 @@ export const work: CaseStudy[] = [
     year: "2026",
     tags: ["Web & Digital", "Corporate", "Motion"],
     cover: "indigo",
+    image: "/work/al-hamad.jpg",
     url: "https://al-hamad-group.vercel.app",
     summary:
       "A corporate site for a diversified contractor spanning construction, industry, real estate, renewable energy and trading — animated to signal scale.",
@@ -88,6 +91,7 @@ export const work: CaseStudy[] = [
     year: "2026",
     tags: ["Web & Digital", "E-commerce", "UX / UI"],
     cover: "blue",
+    image: "/work/gearup.jpg",
     url: "https://gear-up-me.vercel.app",
     summary:
       "An e-commerce storefront for genuine PC hardware in the UAE — fast, filterable and built around warranty and same-day delivery.",
@@ -117,6 +121,7 @@ export const work: CaseStudy[] = [
     year: "2026",
     tags: ["Web & Digital", "Corporate", "MEP"],
     cover: "iris",
+    image: "/work/silver-star.jpg",
     url: "https://silver-star-electromechanical.vercel.app",
     summary:
       "A marketing site for a Dubai MEP contractor — HVAC, electrical, plumbing and fit-out — built to make engineering rigour feel credible at a glance.",

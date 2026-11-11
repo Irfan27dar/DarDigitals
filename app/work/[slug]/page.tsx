@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { work, getCaseStudy } from "@/content/work";
@@ -109,15 +110,19 @@ export default function CaseStudyPage({
       <section className="container-px">
         <Reveal>
           <div
-            className={`relative isolate flex aspect-[16/9] items-center justify-center overflow-hidden rounded-3xl border border-white/10 ${
+            className={`relative isolate aspect-[16/9] overflow-hidden rounded-3xl border border-white/10 ${
               covers[study.cover] ?? covers.indigo
             }`}
           >
-            <div className="grain absolute inset-0 opacity-[0.05] mix-blend-overlay" />
-            <div className="absolute inset-0 bg-grid-fade bg-[size:48px_48px] opacity-15" />
-            <span className="font-display text-5xl font-bold text-bone/85 sm:text-7xl">
-              {study.client}
-            </span>
+            <Image
+              src={study.image}
+              alt={`${study.client} website — above the fold`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 80rem"
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10" />
           </div>
         </Reveal>
       </section>

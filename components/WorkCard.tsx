@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { CaseStudy } from "@/content/work";
@@ -25,30 +26,30 @@ export default function WorkCard({
   return (
     <motion.article variants={staggerItem} className="group">
       <Link href={`/work/${study.slug}`} className="block">
-        {/* Cover */}
+        {/* Cover — above-the-fold screenshot of the live site */}
         <div
           className={`relative isolate aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 ${
             covers[study.cover] ?? covers.indigo
-          } before:absolute before:inset-0 before:-z-10 before:opacity-80 before:transition-transform before:duration-700 group-hover:before:scale-110`}
+          }`}
         >
-          {/* grain + grid texture */}
-          <div className="grain absolute inset-0 opacity-[0.05] mix-blend-overlay" />
-          <div className="absolute inset-0 bg-grid-fade bg-[size:40px_40px] opacity-20" />
+          <Image
+            src={study.image}
+            alt={`${study.client} website — above the fold`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          />
+          {/* legibility scrim + inner ring */}
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-midnight/70 to-transparent" />
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
 
           {/* index + category */}
           <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">
-            <span className="font-display text-sm font-semibold tracking-widest text-bone/50">
+            <span className="font-display text-sm font-semibold tracking-widest text-bone drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="rounded-full border border-white/15 bg-midnight/40 px-3 py-1 text-xs text-bone/80 backdrop-blur-sm">
+            <span className="rounded-full border border-white/15 bg-midnight/55 px-3 py-1 text-xs text-bone backdrop-blur-sm">
               {study.category}
-            </span>
-          </div>
-
-          {/* big client mark */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-display text-3xl font-bold text-bone/85 transition-transform duration-700 group-hover:scale-105 sm:text-4xl">
-              {study.client}
             </span>
           </div>
 
