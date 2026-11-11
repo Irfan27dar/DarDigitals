@@ -143,6 +143,36 @@ export const work: CaseStudy[] = [
       { label: "Deployed", value: "Live" },
     ],
   },
+  {
+    slug: "khl-konnekt",
+    title: "Keep the work at home",
+    client: "KHL Konnekt",
+    category: "Web & Digital",
+    year: "2026",
+    tags: ["Web & Digital", "Marketplace", "Brand"],
+    cover: "indigo",
+    image: "/work/khl-konnekt.jpg",
+    url: "https://khl-konnekt.vercel.app",
+    summary:
+      "A community marketplace connecting Kashmiri freelancers with people who want to hire trusted local talent — built to keep the work close to home.",
+    context:
+      "KHL Konnekt set out to connect Kashmiri freelancers — in web, design, marketing, video, writing and consulting — with clients who want to hire trusted talent from their own community.",
+    challenge:
+      "Launch a credible two-sided marketplace that feels welcoming to both freelancers and the people hiring them, with a clear, simple way in.",
+    direction:
+      "A warm, community-first platform with clear service categories and a confident, human voice — ‘hire Kashmiri talent, keep the work at home.’",
+    execution:
+      "Designed and built the marketplace experience — service categories, listings, search and onboarding — as a responsive site deployed on Vercel.",
+    result:
+      "A live platform that gives Kashmiri freelancers a home for their work and gives clients an easy, trusted way to find and hire local talent.",
+    reflection:
+      "A marketplace lives or dies on trust — the design leads with community and keeps the path to hiring short.",
+    metrics: [
+      { label: "Focus", value: "Kashmir" },
+      { label: "Model", value: "Marketplace" },
+      { label: "Status", value: "Live" },
+    ],
+  },
 ];
 
 export function getCaseStudy(slug: string) {
