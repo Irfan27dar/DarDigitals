@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-11-13T08:29:36.387Z",
         "reason": "user confirmed: requested vibrant gradient headline sweep (blue->iris->cyan) as the brand signature"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "app/contact/page.tsx"
+        ],
+        "createdAt": "2026-11-13T08:34:43.064Z",
+        "reason": "user confirmed: vibrant gradient headline sweep is the brand signature"
       }
     ]
   }

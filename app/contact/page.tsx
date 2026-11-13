@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
 import { site } from "@/content/site";
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const details = [
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
+  { icon: Phone, label: "Phone", value: site.phone, href: site.phoneHref },
   {
     icon: MessageCircle,
     label: "WhatsApp",

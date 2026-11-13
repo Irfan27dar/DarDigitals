@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 import { site } from "@/content/site";
 
 export default function Footer() {
@@ -65,6 +65,15 @@ export default function Footer() {
                 >
                   <Mail size={15} className="text-signal" />
                   {site.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.phoneHref}
+                  className="inline-flex items-center gap-2.5 text-bone/80 transition-colors hover:text-bone"
+                >
+                  <Phone size={15} className="text-signal" />
+                  {site.phone}
                 </a>
               </li>
               <li>

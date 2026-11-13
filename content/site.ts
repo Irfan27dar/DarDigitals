@@ -7,8 +7,10 @@ export const site = {
   url: "https://www.dardigitals.com",
   location: "Dubai, UAE",
   email: "hello@dardigitals.com",
-  whatsapp: "+971 50 000 0000",
-  whatsappHref: "https://wa.me/971500000000",
+  phone: "+971 55 885 3759",
+  phoneHref: "tel:+971558853759",
+  whatsapp: "+971 55 885 3759",
+  whatsappHref: "https://wa.me/971558853759",
   nav: [
     { label: "Work", href: "/#work" },
     { label: "Services", href: "/#services" },
