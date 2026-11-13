@@ -1,29 +1,54 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Play } from "lucide-react";
 import Link from "next/link";
 import { ease } from "@/lib/motion";
 import { site } from "@/content/site";
+import { usePrefersReducedMotion } from "@/lib/useReducedMotion";
 import CTAButton from "./CTAButton";
 
 const line1 = ["YOUR", "BRAND", "DESERVES"];
 const line2 = ["BETTER", "DIGITAL."];
 
 export default function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const reduced = usePrefersReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  // Eased parallax: glows drift down and content lifts as the hero scrolls away.
+  const glowYRaw = useTransform(scrollYProgress, [0, 1], [0, 140]);
+  const glowY = useSpring(glowYRaw, { stiffness: 80, damping: 30, mass: 0.4 });
+  const contentYRaw = useTransform(scrollYProgress, [0, 1], [0, -70]);
+  const contentY = useSpring(contentYRaw, { stiffness: 90, damping: 28, mass: 0.4 });
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28">
-      {/* Background: grid + glows */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
+    <section
+      ref={ref}
+      className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28"
+    >
+      {/* Background: grid + glows (eased parallax) */}
+      <motion.div
+        aria-hidden
+        style={reduced ? undefined : { y: glowY }}
+        className="pointer-events-none absolute inset-0"
+      >
         <div className="absolute inset-0 bg-grid-fade bg-[size:64px_64px] opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]" />
         <div className="glow-signal absolute left-1/2 top-1/2 h-[70vh] w-[70vh] -translate-x-1/2 -translate-y-1/2 animate-pulse-glow" />
         <div className="glow-iris absolute -left-[8%] top-[6%] h-[55vh] w-[55vh]" />
         <div className="glow-aqua absolute -right-[6%] bottom-[2%] h-[46vh] w-[46vh]" />
         <div className="glow-gold absolute right-[12%] top-[20%] h-56 w-56" />
         <div className="grain absolute inset-0 opacity-[0.04] mix-blend-overlay" />
-      </div>
+      </motion.div>
 
-      <div className="container-px relative w-full">
+      <motion.div
+        style={reduced ? undefined : { y: contentY, opacity: contentOpacity }}
+        className="container-px relative w-full"
+      >
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -126,7 +151,7 @@ export default function Hero() {
             </span>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import CursorGlow from "@/components/CursorGlow";
+import ScrollProgress from "@/components/ScrollProgress";
 import { site } from "@/content/site";
 
 const spaceGrotesk = Space_Grotesk({
@@ -76,6 +77,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SmoothScroll>
+          <ScrollProgress />
           <CursorGlow />
           <Header />
           <main id="main">{children}</main>

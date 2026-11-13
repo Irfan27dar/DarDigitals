@@ -32,14 +32,15 @@ export default function HomePage() {
 
       {/* ── Selected Work (dark) ───────────────────────── */}
       <section id="work" className="relative py-24 sm:py-32">
-        <div className="container-px">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+        <div className="container-px grid gap-10 lg:grid-cols-[0.82fr_1.7fr] lg:gap-16">
+          {/* Sticky pinned heading — stays put while the cards scroll beside it */}
+          <div className="lg:sticky lg:top-28 lg:h-fit">
             <SectionHeading
               eyebrow="Selected Work"
               title="A few projects. A lot of detail."
               intro="A look at how we bring brand, design, content and digital together — and what changes when the quality finally shows."
             />
-            <Reveal delay={0.1} className="shrink-0">
+            <Reveal delay={0.1} className="mt-8">
               <Link
                 href="/contact"
                 className="link-underline inline-flex items-center gap-2 text-sm font-semibold text-bone"
@@ -54,7 +55,7 @@ export default function HomePage() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-x-6 gap-y-12 sm:grid-cols-2"
           >
             {work.map((study, i) => (
               <WorkCard key={study.slug} study={study} index={i} />
