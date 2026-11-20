@@ -4,12 +4,14 @@ import { work } from "@/content/work";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ["", "/about", "/contact"].map((path) => ({
-    url: `${site.url}${path}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: path === "" ? 1 : 0.8,
-  }));
+  const staticRoutes = ["", "/about", "/contact", "/terms", "/privacy"].map(
+    (path) => ({
+      url: `${site.url}${path}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: path === "" ? 1 : path === "/terms" || path === "/privacy" ? 0.3 : 0.8,
+    })
+  );
 
   const workRoutes = work.map((w) => ({
     url: `${site.url}/work/${w.slug}`,

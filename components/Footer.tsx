@@ -106,6 +106,24 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>
+          <ul className="flex items-center gap-5">
+            <li>
+              <Link
+                href="/terms"
+                className="link-underline transition-colors hover:text-bone"
+              >
+                Terms &amp; Conditions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/privacy"
+                className="link-underline transition-colors hover:text-bone"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
           <p className="inline-flex items-center gap-2">
             Made in {site.location}
             <span className="signal-dot" />
