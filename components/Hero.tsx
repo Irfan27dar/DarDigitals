@@ -56,7 +56,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease }}
           className="eyebrow mb-7"
         >
-          Dubai Creative Studio · Video · Design · AI
+          Global Creative Studio · Video · Design · AI
         </motion.p>
 
         {/* Headline — words rise in sequentially */}

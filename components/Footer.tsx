@@ -125,7 +125,7 @@ export default function Footer() {
             </li>
           </ul>
           <p className="inline-flex items-center gap-2">
-            Made in {site.location}
+            Working worldwide
             <span className="signal-dot" />
           </p>
         </div>

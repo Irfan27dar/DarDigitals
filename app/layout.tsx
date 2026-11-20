@@ -25,18 +25,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Dubai Creative Digital Studio`,
+    default: `${site.name} — Global Creative Digital Studio`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
   keywords: [
-    "creative studio Dubai",
+    "creative studio",
+    "global creative agency",
     "brand identity",
     "web design",
     "content studio",
-    "video production Dubai",
+    "video production",
     "AI content",
-    "digital marketing UAE",
+    "digital marketing",
   ],
   authors: [{ name: site.name }],
   openGraph: {
@@ -44,12 +45,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — Dubai Creative Digital Studio`,
+    title: `${site.name} — Global Creative Digital Studio`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Dubai Creative Digital Studio`,
+    title: `${site.name} — Global Creative Digital Studio`,
     description: site.description,
   },
   alternates: { canonical: site.url },

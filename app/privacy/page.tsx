@@ -27,8 +27,9 @@ export default function PrivacyPage() {
       <h2>1. Who we are</h2>
       <p>
         {site.legalName} (&ldquo;{site.name}&rdquo;, &ldquo;we&rdquo;,
-        &ldquo;us&rdquo; or &ldquo;our&rdquo;) is a creative digital studio based
-        in {site.location}. For any privacy question, contact us at{" "}
+        &ldquo;us&rdquo; or &ldquo;our&rdquo;) is a global creative digital
+        studio working with clients worldwide. For any privacy question, contact
+        us at{" "}
         <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 

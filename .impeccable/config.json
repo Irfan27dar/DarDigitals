@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-11-13T08:34:43.064Z",
         "reason": "user confirmed: vibrant gradient headline sweep is the brand signature"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "app/about/page.tsx"
+        ],
+        "createdAt": "2026-11-20T06:58:47.349Z",
+        "reason": "user confirmed: vibrant gradient headline sweep is the brand signature"
       }
     ]
   }

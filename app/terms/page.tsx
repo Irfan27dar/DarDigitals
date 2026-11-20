@@ -27,9 +27,9 @@ export default function TermsPage() {
       <h2>1. Who we are</h2>
       <p>
         {site.legalName} (&ldquo;{site.name}&rdquo;, &ldquo;we&rdquo;,
-        &ldquo;us&rdquo; or &ldquo;our&rdquo;) is a creative digital studio based
-        in {site.location}, providing brand identity, web &amp; digital, content
-        and campaign services. You can reach us at{" "}
+        &ldquo;us&rdquo; or &ldquo;our&rdquo;) is a global creative digital
+        studio providing brand identity, web &amp; digital, content and campaign
+        services to clients worldwide. You can reach us at{" "}
         <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 
@@ -141,10 +141,11 @@ export default function TermsPage() {
 
       <h2>13. Governing law</h2>
       <p>
-        These terms are governed by the laws of the United Arab Emirates as
-        applied in the Emirate of Dubai, and the courts of Dubai have exclusive
-        jurisdiction over any dispute, without prejudice to any mandatory
-        consumer rights.
+        These terms are governed by the laws of the jurisdiction in which{" "}
+        {site.name} is established. Where a specific engagement agreement sets out
+        a governing law and the courts or venue for resolving disputes, that
+        agreement prevails. Nothing here affects any mandatory rights you may have
+        under the laws of your own country.
       </p>
 
       <h2>14. Changes to these terms</h2>

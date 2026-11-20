@@ -3,9 +3,9 @@ export const site = {
   legalName: "DarDigitals Creative Studio",
   tagline: "Video · Design · AI",
   description:
-    "DarDigitals is a Dubai creative studio building brands, websites, content and campaigns that make good businesses easier to trust.",
+    "DarDigitals is a global creative studio building brands, websites, content and campaigns that make good businesses easier to trust.",
   url: "https://www.dardigitals.com",
-  location: "Dubai, UAE",
+  location: "Worldwide",
   email: "hello@dardigitals.com",
   phone: "+971 55 885 3759",
   phoneHref: "tel:+971558853759",

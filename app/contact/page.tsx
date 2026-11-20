@@ -7,7 +7,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell DarDigitals what you're building. Start a project with a Dubai creative studio for brand, web, content and campaigns.",
+    "Tell DarDigitals what you're building. Start a project with a global creative studio for brand, web, content and campaigns.",
 };
 
 const details = [
@@ -19,7 +19,7 @@ const details = [
     value: site.whatsapp,
     href: site.whatsappHref,
   },
-  { icon: MapPin, label: "Studio", value: site.location, href: undefined },
+  { icon: MapPin, label: "Reach", value: site.location, href: undefined },
   { icon: Clock, label: "Response", value: "Within 1 working day", href: undefined },
 ];
 

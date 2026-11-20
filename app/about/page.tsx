@@ -11,7 +11,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "DarDigitals brings brand, design, content and digital together so the quality of good businesses is visible in every touchpoint. Based in Dubai, UAE.",
+    "DarDigitals brings brand, design, content and digital together so the quality of good businesses is visible in every touchpoint. A global creative studio.",
 };
 
 const stats = [
@@ -69,8 +69,9 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-lg leading-relaxed text-slate">
-                We&apos;re a boutique studio in Dubai, built to punch above our
-                size. You work directly with the people making the work, across
+                We&apos;re a boutique studio that works with clients worldwide,
+                built to punch above our size. You work directly with the people
+                making the work, across
                 every discipline, with an obsession for finish that shows in the
                 details most studios skip.
               </p>
